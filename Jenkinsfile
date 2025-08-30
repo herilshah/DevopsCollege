@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+    tools { nodejs "Node 20" } 
     stages {
         stage('Build') {
             steps {
@@ -16,7 +16,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying React App...'
-                // Later we can add Docker/Server/Netlify/S3 deployment
             }
         }
     }
